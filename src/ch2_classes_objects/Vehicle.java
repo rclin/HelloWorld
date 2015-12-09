@@ -27,7 +27,11 @@ public class Vehicle {
 
     // static initialization block.  cannot throw checked exceptions
     static {
-        nextID = 2;
+        nextID = 1;
+    }
+
+    public Vehicle(String owner) {
+        this.owner = owner;
     }
 
     public static long getHighestID() {
