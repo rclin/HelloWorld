@@ -1,9 +1,11 @@
-package ch2_classes_objects;
+package ch3_extending_classes.abstract_classes_methods;
 
 /**
  * Created by rilin on 12/7/2015.
  */
 public class Vehicle {
+
+    private EnergySource es;
 
     private String owner;
     private int currentSpeed;
@@ -31,9 +33,11 @@ public class Vehicle {
     }
 
     public Vehicle() {
+        es = new GasTank();
     }
 
     public Vehicle(String owner) {
+        this();
         this.owner = owner;
     }
 
@@ -73,5 +77,14 @@ public class Vehicle {
 
     public void changeDirection(int direction) {
         this.currentDirection = direction;
+    }
+
+    public void start() {
+
+        if (es.empty() == false) {
+            System.out.println("vehicle did not start, empty energy source");
+        } else {
+            System.out.println("started vehicle");
+        }
     }
 }

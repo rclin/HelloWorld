@@ -34,4 +34,16 @@ public class Attr {
     public String toString() {
         return name + "='" + value + "'";
     }
+
+    public static void main(String[] args) {
+        System.out.println("attr");
+
+        Attr attr1 = new Attr("attr1");
+        System.out.println(attr1);
+
+        Attr attr2 = new Attr("attr2", "attr2_value");
+        System.out.println(attr2);
+
+        System.out.println(attr2.setValue("attr2_new_value"));
+    }
 }

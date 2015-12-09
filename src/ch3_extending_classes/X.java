@@ -1,4 +1,4 @@
-package ch2_classes_objects;
+package ch3_extending_classes;
 
 /**
  * Created by Richard on 12/8/2015.
